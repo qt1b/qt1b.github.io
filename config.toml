@@ -1,0 +1,8 @@
+baseURL = 'http://qt1b.github.io/'
+languageCode = 'en-us'
+title = "qt1b's personal page"
+theme = "hello-friend-ng"
+
+
+
+custom_css = ["css/custom.css"]
