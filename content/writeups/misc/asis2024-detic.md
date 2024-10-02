@@ -1,10 +1,14 @@
 +++
 title = "Asis 2024 - misc / detic"
 date = 2022-08-07T12:32:23+09:30
+tags = ['ctf','misc','asis','2024']
 draft = false
 toc = false # don't make a table of contents
 +++
-# misc / detic
+- name : detic
+- category : misc
+
+## Objective
 The goal of this challenge is to find a point on Earth that is equidistant from three given locations on earth.
 
 When we connect to the instance, we get the following message:
@@ -34,6 +38,8 @@ The main difficulty of this challenge is the fact that we are dealing with coord
 
 While it is easy to find the middle of a triangle in a two dimmensional plane, the calculation reveals itself to be more complex when dealing with a sherical surface.
 
+## 'Naive' method
+
 First of all, we will need to convert our coordinates to carthesian coordinates. To do this, we create the following functions:
 ```py
 def lat_lon_to_cartesian(lat, lon):
@@ -53,7 +59,12 @@ def cartesian_to_lat_lon(x, y, z):
 ```
 Our initial attempt is to get the middle coordinates of these three points, then normalize it and then multiply it by the radius of the earth.
 
-![](/img/asis2024/Shere_1.png)
+<img src="/img/asis2024/Shere_1.png" style="
+  width: 30%; 
+  heigth: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto">
 
 ```py
 def normalize(x,y,z):
@@ -71,11 +82,17 @@ def solve(P1,P2,P3):
 ```
 While the given result is coherent, it is not what is expected by the instance, and so the search continues.
 
+## The right method
 We then find [this article](http://www.geomidpoint.com/calculation.html), that explains how to compute a **geographic** midpoint with a given number of coordinates, but not a **geometrical** midpoint, which is instead what we're looking for.
 
 After further research, we found [this paper on spherical geometry](http://www.verniana.org/volumes/02/LetterSize/SphericalGeometry.pdf), which provides the formula we were looking for.
 
-![](/img/asis2024/Shere_2.png)
+<img src="/img/asis2024/Shere_2.png" style="
+  width: 30%; 
+  heigth: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto">
 
 By applying the described calculations, we get the following code:
 ```py
