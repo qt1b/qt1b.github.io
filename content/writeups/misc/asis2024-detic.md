@@ -1,9 +1,9 @@
 +++
 title = "Asis 2024 - misc / detic"
-date = 2022-08-07T12:32:23+09:30
+date = 2024-09-22T12:32:23+09:30
 tags = ['ctf','misc','asis','2024']
 draft = false
-toc = false # don't make a table of contents
+toc = true 
 +++
 - name : detic
 - category : misc
@@ -13,7 +13,6 @@ The goal of this challenge is to find a point on Earth that is equidistant from 
 
 When we connect to the instance, we get the following message:
 ```
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 |  Hi, as a `ASIS` driver, you should be in a position where you are   |
 |  exactly the same distance from three passengers in Iran. We will    |
 |  calculate this distance with an accuracy of ten meters. For this,   |
@@ -21,7 +20,6 @@ When we connect to the instance, we get the following message:
 |  exactly 6371 km. Hence, in each step you should find the precise    |
 |  langitude and altitue and send to server separeted with comma.      |
 |  Are you ready? please send [Y]es or [N]o.                           |
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ``` 
 By answering `Y`, we are given 3 coordinates as longitude and latitude:
 ```
@@ -111,7 +109,7 @@ The first calculation is now done, and validated by the instance !
 By repeating these steps, the flag is obtained.
 
 
-Solver script :
+## Solver script
 
 ```py
 from pwn import remote

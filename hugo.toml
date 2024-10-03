@@ -1,0 +1,158 @@
+baseURL = 'http://qt1b.github.io/'
+languageCode = 'en-us'
+title = "qt1b's personal page"
+theme =  "PaperMod" #"terminal"
+paginate = 0x10
+
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+[languages.en]
+disabled = false
+languageCode = 'en-US'
+languageDirection = 'ltr'
+languageName = 'english'
+title = "qt1b's blog"
+weight = 1
+[languages.en.params]
+subtitle = 'Reference, Tutorials, and Explanations'
+[languages.fr]
+disabled = true
+languageCode = 'fr-FR'
+languageDirection = 'ltr'
+languageName = 'français'
+title = "blog de qt1b"
+weight = 2
+[languages.fr.params]
+# subtitle = 'Referenz, Tutorials und Erklärungen'
+[languages.ja]
+  disabled = true
+  languageCode = 'ja-JP'
+  languageDirection = 'ltr'
+  languageName = '日本語'
+  title = 'qt1bのブロッグ'
+  weight = 3
+[languages.ja.params]
+# subtitle = 'Referenz, Tutorials und Erklärungen'
+[languages.ko]
+disabled = true
+languageCode = 'ko-KR'
+languageDirection = 'ltr'
+languageName = '한국어'
+title = "blog de qt1b"
+weight = 4
+[languages.ko.params]
+# subtitle = 'Referenz, Tutorials und Erklärungen'
+
+
+
+
+[params]
+  # env = production # to enable google analytics, opengraph, twitter-cards and schema.
+  title = "qt1b's blog"
+  description = "description"
+  keywords = ["Developpement","CTF","Blog","Portfolio"]
+  author = "qt1b"
+  # author: ["Me", "You"] # multiple authors
+  # images = ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat = "January 2, 2006"
+  ShowShareButtons = false
+ShowReadingTime = true
+disableSpecial1stPost = true
+disableHLJS = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowFullTextinRSS = true
+ShowToc = true
+TocOpen = false
+ShowAllPagesInArchive = true
+ShowPageNums = true
+  [params.profileMode]
+  enabled = false
+  title = "PaperMod"
+  imageUrl = "#"
+  imageTitle = "my image"
+
+    [[params.profileMode.buttons]]
+    name = "Archives"
+    url = "archives"
+
+    [[params.profileMode.buttons]]
+    name = "Tags"
+    url = "tags"
+[params.homeInfoParams]
+    #Title = "Hi there wave"
+    Content = ""
+  [params.editPost]
+    URL = "https://github.com/qt1b/qt1b.github.io/tree/content"
+    Text = "Suggest Changes" # edit text
+    appendFilePath = true # to append file path to Edit link
+
+[taxonomies]
+category = "categories"
+tags = "tags"
+series = "series"
+
+[params.assets]
+disableHLJS = true # enable js snippets
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1_000
+threshold = 0.4
+minMatchCharLength = 0
+keys = [ "title", "permalink", "summary", "content" ]
+
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/qt1b"
+
+[assets]
+    disableHLJS = true # to disable highlight.js
+    disableFingerprinting = true
+    # favicon = "<link / abs url>"
+    # favicon16x16 = "<link / abs url>"
+    # favicon32x32 = "<link / abs url>"
+    # apple_touch_icon = "<link / abs url>"
+    # safari_pinned_tab = "<link / abs url>"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+
+[[menus.main]]
+    identifier = 'tags'
+    name = 'tags'
+    pageRef = '/tags/'
+    weight = 2
+[[menus.main]]
+    identifier = 'archives'
+    name = 'archives'
+    pageRef = 'archives'
+    weight = 3
+[[menus.main]]
+    identifier = 'writeups'
+    name = 'writeups'
+    pageRef = '/writeups/'
+    weight = 5
+  [[menus.main]]
+    identifier = 'search'
+    name = 'search'
+    pageRef = 'search'
+    url = 'search'
+    weight = 4
+  [[languages.ja.menus.main]]
+    name = 'aakaibu'
+    pageRef = 'archives'
+    url = 'archives'
+    weight = 1
+
+
+# used to center / redimension images in specific cases
+[markup.goldmark.renderer]
+unsafe = true
