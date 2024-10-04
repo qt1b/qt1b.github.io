@@ -1,7 +1,5 @@
----
-title: "Search"
-placeholder: Search demo site with full text fuzzy search ...
-layout: "search"
----
-
-
++++
+title = "検索"
+placeholder = "内容で検索する"
+layout = "search"
++++

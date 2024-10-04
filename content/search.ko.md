@@ -1,7 +1,5 @@
----
-title: "Search"
-placeholder: Search demo site with full text fuzzy search ...
-layout: "search"
----
-
-
++++
+title = "검색"
+placeholder = "내용으로 검색하다"
+layout = "search"
++++

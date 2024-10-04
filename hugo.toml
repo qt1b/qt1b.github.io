@@ -82,7 +82,7 @@ ShowPageNums = true
     #Title = "Hi there wave"
     # Content = ""
   [params.editPost]
-    URL = "https://github.com/qt1b/qt1b.github.io/tree/content"
+    URL = "https://github.com/qt1b/qt1b.github.io/tree/main/content"
     Text = "Suggest Changes" # edit text
     appendFilePath = true # to append file path to Edit link
 
@@ -116,6 +116,7 @@ url = "https://github.com/qt1b"
     # apple_touch_icon = "<link / abs url>"
     # safari_pinned_tab = "<link / abs url>"
 
+# to enable search in PaperMod
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
 
@@ -126,7 +127,7 @@ home = [ "HTML", "RSS", "JSON" ]
     weight = 2
 [[menus.main]]
     identifier = 'archives'
-    name = 'archives'
+    name = 'archive'
     pageRef = 'archives'
     weight = 3
 [[menus.main]]
@@ -149,7 +150,6 @@ home = [ "HTML", "RSS", "JSON" ]
 [[languages.ja.menus.main]]
     name = 'aakaibu'
     pageRef = 'archives'
-    url = 'archives'
     weight = 1
 
 # used to center / redimension images in specific cases
